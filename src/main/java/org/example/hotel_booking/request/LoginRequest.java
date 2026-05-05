@@ -1,4 +1,4 @@
-package org.example.hotel_booking.reuquest;
+package org.example.hotel_booking.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

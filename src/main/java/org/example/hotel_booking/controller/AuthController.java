@@ -5,7 +5,7 @@ import org.example.hotel_booking.model.User;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.hotel_booking.response.JwtResponse;
-import org.example.hotel_booking.reuquest.LoginRequest;
+import org.example.hotel_booking.request.LoginRequest;
 import org.example.hotel_booking.security.jwt.JwtUtils;
 import org.example.hotel_booking.security.user.HotelUserDetails;
 import org.example.hotel_booking.service.IUserService;

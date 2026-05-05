@@ -22,13 +22,12 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class RoomService implements IRoomService {
     private final RoomRepository roomRepository;
-
     @Override
     public Room addNewRoom(MultipartFile file, String roomType, BigDecimal roomPrice) throws SQLException, IOException {
         Room room = new Room();
         room.setRoomType(roomType);
         room.setRoomPrice(roomPrice);
-        if(!file.isEmpty()){
+        if (!file.isEmpty()){
             byte[] photoBytes = file.getBytes();
             Blob photoBlob = new SerialBlob(photoBytes);
             room.setPhoto(photoBlob);
@@ -91,5 +90,4 @@ public class RoomService implements IRoomService {
     public List<Room> getAvailableRooms(LocalDate checkInDate, LocalDate checkOutDate, String roomType) {
         return roomRepository.findAvailableRoomsByDatesAndType(checkInDate, checkOutDate, roomType);
     }
-
 }
